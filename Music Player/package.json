@@ -1,0 +1,17 @@
+{
+  "name": "MusicPlayer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . MusicPlayer --platform=darwin --arch=x64 --version=0.30.4",
+    "package": "asar pack MusicPlayer.app/Contents/Resources/app MusicPlayer.app/Contents/Resources/app.asar"
+  },
+  "author": "rahul rout",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-packager": "^5.1.0",
+    "electron-prebuilt": "^0.31.2"
+  }
+}

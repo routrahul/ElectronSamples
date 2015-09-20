@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>
+      Music Player
+    </title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="style.css" rel="stylesheet"></link>
+  </head>
+  <body>
+      <div class="container app">
+        <div class="col-md-12 col-lg-12 col-xs-12 holdingDiv">
+          <div class="col-md-8 col-lg-8 col-xs-8">
+            <img src="images/loudspeaker.png" class="loudspeaker"></img>
+          </div>
+          <div class="col-md-10 col-lg-10 col-xs-10">
+            <div class="songList">
+              <div class="hindiSongs">
+                <ul class="songsListing">
+                  <li data-number="0" onclick="playMusic(this);">
+                    <span>Madari - Coke Studio</span>
+                  </li>
+                  <li data-number="1" onclick="playMusic(this);">
+                    <span>Oasis - Wonderwall</span>
+                  </li>
+                  <li data-number="2" onclick="playMusic(this);">
+                    <span>Song- 3</span>
+                  </li>
+                  <li data-number="3" onclick="playMusic(this);">
+                    <span>Song-4</span>
+                  </li>
+                  <li data-number="4" onclick="playMusic(this);">
+                    <span>Song-5</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-xs-2 col-lg-2 volumeControls">
+            <div class="col-md-12 col-lg-12 col-xs-12">
+                <span class="glyphicon glyphicon-volume-up" aria-hidden="true" onclick="increaseVolume();"></span>
+            </div>
+            <div class="col-md-12 col-lg-12 col-xs-12">
+                <span class="glyphicon glyphicon-volume-down" aria-hidden="true" onclick="reduceVolume();"></span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xs-6 playerControls">
+            <div class="btn-group btn-group-sm" role="group" aria-label="Large button group">
+              <button type="button" class="btn glyphicon glyphicon-backward" onclick="lastSong();"></button>
+              <button type="button" class="btn glyphicon glyphicon-play"></button>
+              <button type="button" class="btn glyphicon glyphicon-forward" onclick="nextSong();"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+  <script>
+    window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min.js');
+  </script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="music.js"></script>
+  <script src="menu.js"></script>
+</html>
