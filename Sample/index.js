@@ -14,4 +14,4 @@ app.on('ready', function(){
     show:true // This is to keep the window hidden.
   });
   secondaryWindow.loadUrl('file://'+ __dirname + '/secondary.html');
-})
+});
