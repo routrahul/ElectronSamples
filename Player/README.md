@@ -20,8 +20,21 @@ its package manager (npm) installed.  You can get them from [http://nodejs.org/]
 Clone the angular-seed repository using [git][git]:
 
 ```
-git clone https://github.com/angular/angular-seed.git
+git clone https://github.com/routrahul/ElectronSamples.git
 cd Player
 ```
 
-If you just want to start a new project without the angular-seed commit history then you can do:
+You will have to install npm dependencies:
+
+```
+npm install
+```
+This will install the npm dependencies like Electron Prebuilt and Electron Packager.
+Once this is complete, you can install the bower dependencies. You can get bower from
+[https://bower.io/](https://bower.io/).
+
+```
+cd app
+bower install
+```
+This will install the bower dependencies like Angular, Bootstrap etc.
