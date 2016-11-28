@@ -17,7 +17,7 @@ its package manager (npm) installed.  You can get them from [http://nodejs.org/]
 
 ### Clone Music Player
 
-Clone the angular-seed repository using [git][git]:
+Clone the angular-seed repository using:
 
 ```
 git clone https://github.com/routrahul/ElectronSamples.git
@@ -38,3 +38,10 @@ cd app
 bower install
 ```
 This will install the bower dependencies like Angular, Bootstrap etc.
+And you are good to go!!!
+
+```
+cd ../
+npm run start
+```
+This will start the electron app and you should be seeing the Music Player.
