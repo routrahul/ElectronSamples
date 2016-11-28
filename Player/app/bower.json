@@ -1,0 +1,22 @@
+{
+  "name": "Player",
+  "homepage": "",
+  "authors": [
+    "Rahul Rout"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "1.5.5",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.8",
+    "howler": "^2.0.1",
+    "angular-siri-wave": "*"
+  }
+}

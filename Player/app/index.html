@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music Player</title>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./styles/custom/custom.css" rel="stylesheet">
+  </head>
+  <body ng-app="Player">
+    <div class="container-fluid">
+      <div ng-view></div>
+    </div>
+  </body>
+  <script>
+    window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.min.js');
+  </script>
+  <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./bower_components/angular/angular.js"></script>
+  <script src="./bower_components/angular-route/angular-route.min.js"></script>
+  <script src="./bower_components/angular-siri-wave/siriwave.js"></script>
+  <script src="./bower_components/howler/dist/howler.min.js"></script>
+  <script src="views/firstView/firstView.js"></script>
+
+  <script src="app.js"></script>
+  <!-- <script src="../global/menu/menu.js"></script> -->
+</html>

@@ -1,0 +1,54 @@
+<!-- <div class="row playerContainer">
+  <div class="col-xs-12">
+    <div>
+      <div class="btn-group btn-group-lg" role="group">
+        <button ng-click="prevSound()" type="button" class="btn btn-default">
+          <i class="glyphicon glyphicon-fast-backward"></i>
+        </button>
+        <button ng-click="playPause()" type="button" class="btn btn-default">
+          <i ng-class="{'glyphicon-pause': isPlaying(), 'glyphicon-play': !isPlaying()}" class="glyphicon glyphicon-play"></i>
+        </button>
+        <button ng-click="nextSound()" type="button" class="btn btn-default">
+          <i class="glyphicon glyphicon-fast-forward"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="song in songsList">{{song}}</li>
+    </ul>
+  </div>
+</div> -->
+  <!-- Top Info -->
+  <div id="title">
+    <span id="track">{{trackName}}</span>
+    <div id="timer">0:00</div>
+    <div id="duration">{{timer}}</div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controlsOuter">
+    <div class="controlsInner">
+      <div id="loading"></div>
+      <div class="btn" id="playBtn" ng-click="playPause()" ng-show="!songPlaying"></div>
+      <div class="btn" id="pauseBtn" ng-click="playPause()" ng-show="songPlaying"></div>
+      <div class="btn" id="prevBtn" ng-click="prevSound()"></div>
+      <div class="btn" id="nextBtn" ng-click="nextSound()"></div>
+    </div>
+    <div class="btn" id="playlistBtn" ng-click="showPlaylist()"></div>
+    <!-- <div class="btn" id="volumeBtn"></div> -->
+  </div>
+
+  <!-- Progress -->
+  <div id="waveform" ng-show="songPlaying"></div>
+
+  <div id="bar" ng-hide="songPlaying"></div>
+  <div id="progress"></div>
+
+  <!-- Playlist -->
+  <div id="playlist" ng-show="playListVisible">
+    <div id="list">
+      <div class="list-song" ng-repeat="song in player.playlist" ng-click="playPlaylistSong($index)">{{song.name}}</div>
+    </div>
+  </div>
