@@ -43,9 +43,9 @@ app.on('ready', function() {
   const menu = Menu.buildFromTemplate(template)
   Menu.setApplicationMenu(menu);
 
-  globalShortcut.register('CommandOrControl+P', function(){
-    openFolderDialog();
-  });
+  // globalShortcut.register('CommandOrControl+P', function(){
+  //   openFolderDialog();
+  // });
 });
 
 function openFolderDialog(){
