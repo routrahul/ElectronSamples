@@ -45,3 +45,5 @@ cd ../
 npm run start
 ```
 This will start the electron app and you should be seeing the Music Player.
+
+The app uses the awesome [Howler.js](https://howlerjs.com/) library for the sound controls. 

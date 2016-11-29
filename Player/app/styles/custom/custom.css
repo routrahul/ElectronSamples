@@ -16,7 +16,7 @@ body {
   background: #bb71f3;
   background: -moz-linear-gradient(-45deg, #bb71f3 0%, #3d4d91 100%);
   background: -webkit-linear-gradient(-45deg, #bb71f3 0%, #3d4d91 100%);
-  background: linear-gradient(135deg, #bb71f3 0%, #3d4d91 100%);
+  background: linear-gradient(135deg, #483D8B 0%, #4B0082 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bb71f3', endColorstr='#3d4d91', GradientType=1);
   font-family: "Helvetica Neue", "Futura", "Trebuchet MS", Arial;
   -webkit-user-select: none;
@@ -315,4 +315,12 @@ body {
 @-ms-keyframes fadeout {
   from { opacity: 1; }
   to   { opacity: 0; }
+}
+
+#title #track{
+  position: fixed;
+  top:12%;
+  left:22%;
+  font-size: 15px;
+  width:60%;
 }

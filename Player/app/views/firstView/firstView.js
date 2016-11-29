@@ -11,7 +11,7 @@ angular.module('Player.first', ['ngRoute'])
     function($scope,$location){
       $scope.sound = null;
       $scope.songPlaying=false,$scope.playListVisible = false;
-      $scope.timer = "0.00"
+      $scope.timer = "0.00",$scope.trackName = "";
 
       $scope.songsList = [];
       const ipc = require('electron').ipcRenderer;
@@ -72,7 +72,7 @@ angular.module('Player.first', ['ngRoute'])
 
           index = typeof index === 'number' ? index : self.index;
           var data = self.playlist[index];
-
+          $scope.trackName = data.name;
           // If we already loaded this track, use the current one.
           // Otherwise, setup and load a new Howl.
           if (data.howl) {
