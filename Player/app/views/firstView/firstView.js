@@ -26,6 +26,10 @@ angular.module('Player.first', ['ngRoute'])
         }
       }
 
+      $scope.seekToTime = function($event){
+        $scope.player.seek($event.clientX / window.innerWidth);
+      }
+
       $scope.playPlaylistSong = function(index){
         $scope.player.skipTo(index);
       }
@@ -176,8 +180,31 @@ angular.module('Player.first', ['ngRoute'])
           var seconds = (secs - minutes * 60) || 0;
 
           return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+        },
+        seek: function(per) {
+          var self = this;
+
+          // Get the Howl we want to manipulate.
+          var sound = self.playlist[self.index].howl;
+
+          // Convert the percent into a seek position.
+          if (sound.playing()) {
+            sound.seek(sound.duration() * per);
+          }
         }
       }
+
+      ipc.on('modal-next-song', function (event, arg) {
+        $scope.nextSound();
+      });
+
+      ipc.on('modal-prev-song', function (event, arg) {
+        $scope.prevSound();
+      });
+
+      ipc.on('modal-pause-song', function (event, arg) {
+        $scope.playPause();
+      });
 
       ipc.on('modal-folder-content', function (event, arg) {
         var message = `Asynchronous message reply: ${arg}`;

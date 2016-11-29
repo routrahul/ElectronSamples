@@ -23,16 +23,34 @@ app.on('ready', function() {
       submenu: [
         {
           label:'Select Folder',
-          accelerator:'CommandOrControl+P',
+          accelerator:'CommandOrControl+O',
           click:function(){
             openFolderDialog();
           }
         },
         {
-          label:'Volume',
+          label:'Song Control',
           submenu:[
             {
-              label:'Pause'
+              label:'Pause',
+              accelerator:'CommandOrControl+E',
+              click:function(){
+                sendPauseSongMessage();
+              }
+            },
+            {
+              label:'Next',
+              accelerator:'CommandOrControl+N',
+              click:function(){
+                sendNextSongMessage();
+              }
+            },
+            {
+              label:'Previous',
+              accelerator:'CommandOrControl+P',
+              click:function(){
+                sendNextSongMessage();
+              }
             }
           ]
         }
@@ -47,6 +65,18 @@ app.on('ready', function() {
   //   openFolderDialog();
   // });
 });
+
+function sendPauseSongMessage(){
+  mainWindow.webContents.send('modal-pause-song','pause');
+}
+
+function sendNextSongMessage(){
+  mainWindow.webContents.send('modal-next-song','next');
+}
+
+function sendPrevSongMessage(){
+  mainWindow.webContents.send('modal-prev-song','prev');
+}
 
 function openFolderDialog(){
   var dialog = electron.dialog;

@@ -41,7 +41,7 @@
   </div>
 
   <!-- Progress -->
-  <div id="waveform" ng-show="songPlaying"></div>
+  <div id="waveform" ng-show="songPlaying" ng-click="seekToTime($event)"></div>
 
   <div id="bar" ng-hide="songPlaying"></div>
   <div id="progress"></div>
