@@ -40,10 +40,12 @@ bower install
 This will install the bower dependencies like Angular, Bootstrap etc.
 And you are good to go!!!
 
+The app uses the awesome [Howler.js](https://howlerjs.com/) library for the sound controls.
+To run the application...
+
 ```
 cd ../
 npm run start
 ```
 This will start the electron app and you should be seeing the Music Player.
-
-The app uses the awesome [Howler.js](https://howlerjs.com/) library for the sound controls. 
+You can select the folder containing your .mp3 files by using the shortcut keys (Cmd or Ctrl + o) or have a look at the native menus where Open Folder should be under Sound Control tab.
