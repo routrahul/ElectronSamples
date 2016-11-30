@@ -6,9 +6,10 @@ const fs = require('fs');
 
 app.on('ready', function() {
   mainWindow = new BrowserWindow({width: 612, height: 384})
+    // ,frame: false})
   mainWindow.loadURL(`file://${__dirname}/app/index.html`)
 
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   mainWindow.setResizable(false)
 
