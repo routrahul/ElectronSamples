@@ -48,4 +48,4 @@ cd ../
 npm run start
 ```
 This will start the electron app and you should be seeing the Music Player.
-You can select the folder containing your .mp3 files by using the shortcut keys (Cmd or Ctrl + o) or have a look at the native menus where Open Folder should be under Sound Control tab.
+You can select the folder containing your mp3 files by using the shortcut keys (Cmd or Ctrl + o) or have a look at the native menus where Open Folder should be under Sound Control tab.
