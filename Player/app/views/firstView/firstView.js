@@ -181,7 +181,7 @@ angular.module('Player.first', ['ngRoute'])
 
           return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
         },
-        seek: function(per) {
+        seek: function(time) {
           var self = this;
 
           // Get the Howl we want to manipulate.
@@ -189,7 +189,7 @@ angular.module('Player.first', ['ngRoute'])
 
           // Convert the percent into a seek position.
           if (sound.playing()) {
-            sound.seek(sound.duration() * per);
+            sound.seek(sound.duration() * time);
           }
         }
       }
